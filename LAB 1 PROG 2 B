@@ -1,0 +1,71 @@
+class Member {
+    private String name;
+    private int age;
+    private int membershipDuration;
+    private double membershipFee;
+
+    private static final double FEE_PER_MONTH = 30.0;
+
+    public Member(String name, int age, int membershipDuration) {
+        this.name = name;
+        this.age = age;
+        this.membershipDuration = membershipDuration;
+        calculateMembershipFee();
+    }
+
+    private void calculateMembershipFee() {
+        this.membershipFee = membershipDuration * FEE_PER_MONTH;
+    }
+
+    public void displayMemberInfo() {
+        System.out.println("\nMember Details:");
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Membership Duration: " + membershipDuration + " months");
+        System.out.println("Membership Fee: $" + membershipFee);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public int getMembershipDuration() {
+        return membershipDuration;
+    }
+
+    public double getMembershipFee() {
+        return membershipFee;
+    }
+}
+
+public class GymMembershipSystem {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter Member's Name: ");
+        String name = scanner.nextLine().trim();
+
+        System.out.print("Enter Member's Age: ");
+        while (!scanner.hasNextInt()) {
+            System.out.print("Invalid input. Please enter a valid age: ");
+            scanner.next();
+        }
+        int age = scanner.nextInt();
+
+        System.out.print("Enter Membership Duration (in months): ");
+        while (!scanner.hasNextInt()) {
+            System.out.print("Invalid input. Please enter a valid membership duration: ");
+            scanner.next();
+        }
+        int membershipDuration = scanner.nextInt();
+
+        Member member = new Member(name, age, membershipDuration);
+        member.displayMemberInfo();
+
+        scanner.close();
+    }
+}
