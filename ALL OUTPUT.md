@@ -12,3 +12,7 @@ LAB 1 PROG 1
 
 ![image](https://github.com/user-attachments/assets/6ad2f209-88c0-4340-8162-5bf84882c140)
 
+LAB 1 PROG 2B
+
+
+![image](https://github.com/user-attachments/assets/a932d930-a09c-4bfd-bddc-582a9852490b)
