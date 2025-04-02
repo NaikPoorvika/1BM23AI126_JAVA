@@ -16,3 +16,8 @@ LAB 2 PROG 3
 
 
 ![image](https://github.com/user-attachments/assets/a932d930-a09c-4bfd-bddc-582a9852490b)
+
+LA 3 PROG 4A
+
+![image](https://github.com/user-attachments/assets/e4556c59-117d-4838-9545-51006c0c0ef8)
+
