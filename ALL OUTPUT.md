@@ -22,5 +22,5 @@ LA 3 PROG 4A
 ![image](https://github.com/user-attachments/assets/e4556c59-117d-4838-9545-51006c0c0ef8)
 
 Lab 4 Prog online shopping manager
-![image](https://github.com/user-attachments/assets/32eb78b2-1998-4a1b-b5f0-3de6220cf5b4)
+![image](https://github.com/user-attachments/assets/31313b9f-d34e-4d65-afae-c37c0182965a)
 
