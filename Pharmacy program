@@ -1,0 +1,92 @@
+
+import java.util.ArrayList;
+
+class Pharmacy { // Make this package-private if you don't need it to be accessed outside the package
+    public final int id;
+    public String name;
+    public int quantity;
+    public double price;
+
+    public Pharmacy(int id, String name, int quantity, double price) {
+        this.id = id;
+        this.name = name;
+        this.quantity = quantity;
+        this.price = price;
+    }
+}
+
+public class PharmacyManagementSystem {
+    // Make inventory final if you don't plan on reassigning it
+    private final ArrayList<Pharmacy> inventory = new ArrayList<>();
+
+    // Add new item to inventory
+    public void addItem(Pharmacy item) {
+        inventory.add(item);
+    }
+
+    // Update existing item in inventory
+    public void updateItem(int id, int quantity, double price) {
+        for (Pharmacy item : inventory) {
+            if (item.id == id) {
+                item.quantity = quantity;
+                item.price = price;
+                break;
+            }
+        }
+    }
+
+    // Remove item from inventory
+    public void removeItem(int id) {
+        inventory.removeIf(item -> item.id == id);
+    }
+
+    // Display list of all items
+    public void displayInventory() {
+        System.out.println("Inventory:");
+        for (Pharmacy item : inventory) {
+            System.out.println(item.id + " | " + item.name + " | Quantity: "
+                    + item.quantity + " | Price: " + item.price);
+        }
+    }
+
+    // Search for item by ID
+    public Pharmacy searchItemByID(int id) {
+        for (Pharmacy item : inventory) {
+            if (item.id == id) {
+                return item;
+            }
+        }
+        return null; // Item not found
+    }
+
+    // Main method to use the system
+    public static void main(String[] args) {
+        PharmacyManagementSystem system = new PharmacyManagementSystem();
+
+        // Adding items
+        system.addItem(new Pharmacy(1, "Aspirin", 100, 10.50));
+        system.addItem(new Pharmacy(2, "Ibuprofen", 200, 5.75));
+
+        // Display inventory
+        system.displayInventory();
+
+        // Update item
+        system.updateItem(1, 120, 11.00);
+
+        // Display updated inventory
+        system.displayInventory();
+
+        // Remove item
+        system.removeItem(2);
+
+        // Display inventory after removal
+        system.displayInventory();
+
+        // Search for an item
+        Pharmacy item = system.searchItemByID(1);
+        if (item != null) {
+            System.out.println("Found item: " + item.name + " | Quantity: " + item.quantity + " | Price: " + item.price);
+        } else {
+            System.out.println("Item not found.");
+        }
+    }
