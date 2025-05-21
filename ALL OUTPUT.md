@@ -29,4 +29,10 @@ lab 9
 ![image](https://github.com/user-attachments/assets/149111ff-be18-4f87-a356-dd8b6c786b1c)
 ![image](https://github.com/user-attachments/assets/6549f59f-8fd1-4561-8557-eb753f0e95c2)
 
+lab 8
+![image](https://github.com/user-attachments/assets/4185aa94-1dba-43e1-914e-3d7cf1b13f9d)
+
+
+
+
 
